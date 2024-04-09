@@ -1,3 +1,5 @@
+
+#To check the ping status
 - name: Checking Ping
   hosts: all
   become: yes
