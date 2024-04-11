@@ -1,0 +1,8 @@
+#Facts are the pre-defined variables in ansible that kept handy and we can use them anywhere according to our requirement
+
+- name: Demo on Facts
+  hosts: localhost
+  tasks:
+    - name : Print the Architecture
+      ansible.builtin.debug:
+         msg: {{ ansible_architecture }}
