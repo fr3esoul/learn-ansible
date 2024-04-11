@@ -5,4 +5,4 @@
   tasks:
     - name : Print the Architecture
       ansible.builtin.debug:
-         msg: {{ ansible_architecture }}
+         msg: "{{ ansible_architecture }}"
