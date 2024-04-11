@@ -1,0 +1,21 @@
+#Errorhandling is used when we want to skip any error  and proceed further to the next task
+#igonore_errors: yes is used to handle the errors in Ansible
+
+- name: Demo on Error Handling
+  hosts: localhost
+  tasks:
+    - name: First Task
+      ansible.built.shell: lss
+      ignore_errors: yes #Here lss is a wrong linux command and don't proceed further but as we had used ignore_errors: yes  it will proceed to next task
+
+    - name: Second Task
+      ansible.builtin.shell: df -h
+
+    - name: Third Task
+      ansible.builtin.shell: udtime
+      ignore_errors: yes
+
+    - name: Fourth Task
+      ansible.builtin.debug:
+          msg: "{{ DevOps }}"
+
