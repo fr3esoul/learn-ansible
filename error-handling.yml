@@ -5,7 +5,7 @@
   hosts: localhost
   tasks:
     - name: First Task
-      ansible.built.shell: lss
+      ansible.builtin.shell: lss
       ignore_errors: yes       #Here lss is a wrong linux command and don't proceed further but as we had used ignore_errors: yes  it will proceed to next task
 
     - name: Second Task
