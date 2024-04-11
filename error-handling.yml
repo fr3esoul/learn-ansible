@@ -17,5 +17,5 @@
 
     - name: Fourth Task
       ansible.builtin.debug:
-          msg: "{{ DevOps }}"
+          msg: DevOps
 
